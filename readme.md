@@ -2,13 +2,17 @@
 
 ## What is this for
 
-利用ChatGPT，输入一个名称清单列表，自动生成多篇主题文章
-【Using ChatGPT, enter a list of names and automatically generate multiple articles with given themes】
+利用ChatGPT，输入一个名称清单列表，自动生成多篇主题文章，并且以docx形式保存。     
+【Using ChatGPT, enter a list of titles or themes, automatically generate multiple articles with given themes, and save as .docx file】
 
 power by pyChatGPT: https://github.com/terry3041/pyChatGPT 
 
+limitation: because of the policy of ChatGPT , there might be some question numbers limitation for some users. 
+
 
 ## How to prepare to use
+
+【requirments: pyChatGPT, python-docx】
 
 At first, you should get the library `pyChatGPT` and `python-docx`. 
 Second, you should find your token from your Chorme browser and copy it into file `token.txt`
@@ -24,9 +28,9 @@ If you are in China with Internet problem, try the tips below:
 
 常用的镜像地址有： 
 
-1)http://mirrors.aliyun.com/pypi/simple/    阿里云
+1) http://mirrors.aliyun.com/pypi/simple/    阿里云
 
-2)https://pypi.mirrors.ustc.edu.cn/simple/ 中国科技大学
+2) https://pypi.mirrors.ustc.edu.cn/simple/ 中国科技大学
 
 3) http://pypi.douban.com/simple/    豆瓣
 
@@ -45,18 +49,17 @@ If you are in China with Internet problem, try the tips below:
 
 * If you don't have Internet problem
   just use
-  `git clone https://github.com/terry3041/pyChatGPT` to get the source code of pyChatGPT library.
+  `git clone https://github.com/terry3041/pyChatGPT` to get the source code of pyChatGPT library.   
+  And then enter the pyChatGPT source code directory and install it by `python -m pip install .`
 * Tips for Chinese with Internet problem    
 你需要一个科学的系统代理，如果还不行可以设置一下git
-git config --global https.proxy http://127.0.0.1:7890
+```
+git config --global http.https://github.com.proxy socks5://127.0.0.1:7890(此处是你的系统代理地址+端口)
 git clone https://github.com/terry3041/pyChatGPT 
-git config --global --unset https.proxy
-
-http协议则把上述的换成http即可
-
-
-
-And then enter the pyChatGPT source code directory and install it
+git config --global --unset http.https://github.com.proxy
+```
+http协议则把上述的换成http即可   
+最后进入源码目录，执行如下命令安装
 `python -m pip install . -i http://pypi.douban.com/simple --trusted-host pypi.douban.com`
 
 
@@ -64,15 +67,16 @@ And then enter the pyChatGPT source code directory and install it
 ### how to get token
 
 在本项目目录下新建一个token.txt文件，打开浏览器登录进去chatgpt 然后 F12 -》应用-》 cookies -》 找到 __Secure-next-auth.session-token的值 -》复制到 token.txt
+
 【Create a new token.txt file in this project directory, open the browser and log in to chatgpt, then do: F12 -> Application -> cookies -> Find the value of "__Secure-next-auth.session-token" -> Copy to token.txt】
 
 
 ## How to use
 
 1. prepare a csv file with all your article titles (with id column), for example
->   id title
->   1  Helloworld
->   2  Today is a good day
+>   id title       
+>   1  Helloworld    
+>   2  Today is a good day    
 
 2. set the necessary path
 
