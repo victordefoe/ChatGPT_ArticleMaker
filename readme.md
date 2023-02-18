@@ -1,4 +1,7 @@
+### The repo is no longer maintained
 
+> Since the network of the official ChatGPT website is heavily loaded and ChatGPT has severe limitations, especially under the free user restriction, it will be hard to use it to create passages. With the discontinuation of the development of the supported library `pyChatGPT`, this repo will also be closed.   
+由于ChatGPT已然商业化，不再为大众提供可靠的无限制访问，基于此的项目已然失去作用，本项目也将不再维护，就此关闭。祝大家生活可爱。
 
 ## What is this for
 
